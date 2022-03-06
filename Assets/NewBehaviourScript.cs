@@ -1,8 +1,8 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-	// тест коммента на русском, в прошлый раз была проблема с кодировкой
+	// С‚РµСЃС‚ РєРѕРјРјРµРЅС‚Р° РЅР° СЂСѓСЃСЃРєРѕРј, РІ РїСЂРѕС€Р»С‹Р№ СЂР°Р· Р±С‹Р»Р° РїСЂРѕР±Р»РµРјР° СЃ РєРѕРґРёСЂРѕРІРєРѕР№
 }
