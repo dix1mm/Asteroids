@@ -8,7 +8,10 @@ public class ECSStartup : MonoBehaviour{
 
 	private void systemsAdd(){
 		_systems
-			.Add(new SColliders())
+			.Add(new SGun())//выстрел из пушки
+			.Add(new SSpawn())//спавн астероидов и тарелок
+			.Add(new SColliders())//все столкновения
+			.Add(new SLifetime())//время жизни выстрелов
 		;
 	}
 

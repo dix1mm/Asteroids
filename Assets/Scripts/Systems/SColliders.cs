@@ -43,10 +43,23 @@ public class SColliders : IEcsRunSystem{
 			но делать это ради 3-х сущностей не очень хочется
 			возможно подход изначально был выбран не верный и надо было передавать сюда entity а не gameobject
 		*/
-		if ((ct1 == ColliderType.Player && ct2 == ColliderType.Enemy) || (ct1 == ColliderType.Enemy && ct2 == ColliderType.Player)){
-		
-		}
-			Debug.Log(go1);
-			Debug.Log(go2);
+		if (ct1 == ColliderType.Player && ct2 == ColliderType.Enemy)
+			collisionPlayerEnemy(go1, go2);
+		if (ct2 == ColliderType.Player && ct1 == ColliderType.Enemy)
+			collisionPlayerEnemy(go2, go1);
+		if (ct1 == ColliderType.Shot && ct2 == ColliderType.Enemy)
+			collisionShotEnemy(go1, go2);
+		if (ct2 == ColliderType.Shot && ct1 == ColliderType.Enemy)
+			collisionShotEnemy(go2, go1);
+	}
+
+	private void collisionPlayerEnemy(GameObject player, GameObject enemy){
+		Debug.Log(player);
+		Debug.Log(enemy);
+	}
+
+	private void collisionShotEnemy(GameObject shot, GameObject enemy){
+		Debug.Log(shot);
+		Debug.Log(enemy);
 	}
 }
