@@ -7,23 +7,40 @@ public class ECSStartup : MonoBehaviour{
 	private EcsSystems _systems;
 
 	private void systemsAdd(){
-		/*_systems
-			.Add(new WeaponSystem())
-		;*/
+		_systems
+			.Add(new SColliders())
+		;
 	}
+
+	private void systemsAddOneFrame(){
+		_systems
+			.OneFrame<EInputFire>()
+			.OneFrame<EInputFireAlt>()
+			.OneFrame<EInputAccelerationStarted>()
+			.OneFrame<EInputAccelerationStopped>()
+			.OneFrame<EInputSlowdownStarted>()
+			.OneFrame<EInputSlowdownStopped>()
+			.OneFrame<EInputRotationLeftStarted>()
+			.OneFrame<EInputRotationLeftStopped>()
+			.OneFrame<EInputRotationRightStarted>()
+			.OneFrame<EInputRotationRightStopped>()
+			.OneFrame<ETriggerEnter>()
+		;
+	}	
 	
 	private void Start(){
 		_world = new EcsWorld();
 		_systems = new EcsSystems(_world);
 		_systems.ConvertScene();
 		systemsAdd();
+		systemsAddOneFrame();
 		_systems.Init();
 	}
-    
+
 	private void Update(){
 		_systems.Run();
 	}
-	
+
 	private void OnDestroy(){
 		_systems.Destroy();
 		_systems = null;
