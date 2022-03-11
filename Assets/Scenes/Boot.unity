@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 199865845}
   - component: {fileID: 199865847}
   - component: {fileID: 199865846}
+  - component: {fileID: 199865848}
   m_Layer: 0
   m_Name: Coords
   m_TagString: Untagged
@@ -249,6 +250,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199865844}
   m_CullTransparentMesh: 1
+--- !u!114 &199865848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199865844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: Coords
+  uEvent: 2
 --- !u!1 &229404306
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +421,7 @@ GameObject:
   - component: {fileID: 318241844}
   - component: {fileID: 318241846}
   - component: {fileID: 318241845}
+  - component: {fileID: 318241847}
   m_Layer: 0
   m_Name: LaserCd
   m_TagString: Untagged
@@ -475,6 +491,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318241843}
   m_CullTransparentMesh: 1
+--- !u!114 &318241847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318241843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: LaserCd
+  uEvent: 6
 --- !u!1 &378188737
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +516,7 @@ GameObject:
   - component: {fileID: 378188738}
   - component: {fileID: 378188740}
   - component: {fileID: 378188739}
+  - component: {fileID: 378188741}
   m_Layer: 0
   m_Name: LaserCount
   m_TagString: Untagged
@@ -555,6 +586,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378188737}
   m_CullTransparentMesh: 1
+--- !u!114 &378188741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378188737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: LaserCount
+  uEvent: 5
 --- !u!1 &409245819
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +821,7 @@ GameObject:
   - component: {fileID: 642962282}
   - component: {fileID: 642962284}
   - component: {fileID: 642962283}
+  - component: {fileID: 642962285}
   m_Layer: 0
   m_Name: Rotation
   m_TagString: Untagged
@@ -845,6 +891,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642962281}
   m_CullTransparentMesh: 1
+--- !u!114 &642962285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642962281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: Rotation
+  uEvent: 3
 --- !u!1 &1186402003
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +1029,7 @@ GameObject:
   - component: {fileID: 1614674905}
   - component: {fileID: 1614674907}
   - component: {fileID: 1614674906}
+  - component: {fileID: 1614674908}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1029,7 +1090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Score:'
 --- !u!222 &1614674907
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1038,6 +1099,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614674904}
   m_CullTransparentMesh: 1
+--- !u!114 &1614674908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614674904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: Score
+  uEvent: 1
 --- !u!1 &1901458436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1124,7 @@ GameObject:
   - component: {fileID: 1901458437}
   - component: {fileID: 1901458439}
   - component: {fileID: 1901458438}
+  - component: {fileID: 1901458440}
   m_Layer: 0
   m_Name: Speed
   m_TagString: Untagged
@@ -1118,6 +1194,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901458436}
   m_CullTransparentMesh: 1
+--- !u!114 &1901458440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901458436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58852212df724642830b8e4680c620c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramName: Speed
+  uEvent: 4
 --- !u!1 &1922351685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138834005}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -300, y: -20, z: 0}
+  m_LocalPosition: {x: -250, y: -20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -25,6 +25,8 @@ public class SLaser : IEcsRunSystem{
 			}else
 				c.CurrChargeTime = 0;
 			c.CurrCd -= Time.deltaTime;
+			UnityEventGenerator.Generate(UEvent.LaserCoundChanged, c.CurrCharge.ToString());
+			UnityEventGenerator.Generate(UEvent.LaserCdChanged, c.CurrChargeTime.ToString("f2"));
 		}
 	}	
 

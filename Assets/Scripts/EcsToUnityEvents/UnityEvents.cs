@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 
 public enum UEvent{
-	GameOver
+	GameOver,
+	ScoreChanged,
+	CoordsChanged,
+	RotationChanged,
+	SpeedChanged,
+	LaserCoundChanged,
+	LaserCdChanged
 }

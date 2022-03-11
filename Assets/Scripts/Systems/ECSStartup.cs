@@ -12,6 +12,7 @@ public class ECSStartup : MonoBehaviour{
 		
 			.Add(new SMoveForward())//передвижение вперед
 			.Add(new SMoveChase())//передвижение тарелки
+			.Add(new SPlayerSearcher())//проставляет целью игрока для MoveChase
 			.Add(new SMoveInput())//передвижение игрока (не уверен стоило ли их разбивать на несколько систем, с одной стороны кастомизация, с другой через чур много систем)
 			.Add(new SSlowdown())//замедление (активное и пассивное) игрока
 			.Add(new SAcceleration())//набор скорости для игрока
@@ -24,8 +25,6 @@ public class ECSStartup : MonoBehaviour{
 			.Add(new SSpawn())//спавн астероидов и тарелок
 			.Add(new SPortal())//телепорт при входе за границу экрана
 			.Add(new SLifetime())//время жизни выстрелов
-			//ui
-			//поражение
 		;
 	}
 

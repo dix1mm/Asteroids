@@ -10,7 +10,8 @@ public class SColliders : IEcsRunSystem{
 	}
 
 	private EcsFilter<ETriggerEnter> f = null;
-
+	private static int _score = 0;
+	
 	public void Run(){
 		foreach (var i in f){
 			ref var enterEvent = ref f.Get1(i);
@@ -54,6 +55,8 @@ public class SColliders : IEcsRunSystem{
 	private void collisionShotEnemy(GameObject shot, GameObject enemy){
 		ref EcsEntity eShot = ref shot.GetEntity();
 		ref EcsEntity eEnemy = ref enemy.GetEntity();
+		_score += 10;
+		UnityEventGenerator.Generate(UEvent.ScoreChanged, _score.ToString());
 		
 		if (eShot.Has<CWeaponPowerful>()){//лазер
 			Object.Destroy(enemy);
