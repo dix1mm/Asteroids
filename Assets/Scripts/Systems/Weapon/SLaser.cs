@@ -33,7 +33,7 @@ public class SLaser : IEcsRunSystem{
 			ref var c = ref f.Get1(i);
 			if (c.CurrCharge == 0) return;
 			if (c.CurrCd > 0) return;
-			Object.Instantiate(c.Shot, c.User.position, Quaternion.identity);
+			Object.Instantiate(c.Shot, c.User.position, c.User.rotation);
 			c.CurrCharge--;
 			c.CurrCd = c.Cd;
 		}

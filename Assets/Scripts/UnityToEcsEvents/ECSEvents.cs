@@ -12,6 +12,6 @@ public struct EInputRotationRightStarted{}
 public struct EInputRotationRightStopped{}
 
 public struct ETriggerEnter{
-	public GameObject Target1;
-	public GameObject Target2;
+	public GameObject GO1;
+	public GameObject GO2;
 }

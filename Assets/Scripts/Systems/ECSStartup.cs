@@ -8,6 +8,8 @@ public class ECSStartup : MonoBehaviour{
 
 	private void systemsAdd(){
 		_systems
+			.Add(new SInitEntityReference())//раздает ссылки на Entity
+		
 			.Add(new SMoveForward())//передвижение вперед
 			.Add(new SMoveChase())//передвижение тарелки
 			.Add(new SMoveInput())//передвижение игрока (не уверен стоило ли их разбивать на несколько систем, с одной стороны кастомизация, с другой через чур много систем)
@@ -41,14 +43,14 @@ public class ECSStartup : MonoBehaviour{
 			.OneFrame<EInputRotationRightStopped>()
 			.OneFrame<ETriggerEnter>()
 		;
-	}	
-	
+	}
+
 	private void Start(){
 		_world = new EcsWorld();
 		_systems = new EcsSystems(_world);
 		_systems.ConvertScene();
 		systemsAdd();
-		systemsAddOneFrame();
+		systemsAddOneFrame();	
 		_systems.Init();
 	}
 

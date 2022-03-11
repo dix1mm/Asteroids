@@ -24,7 +24,7 @@ public class SGun : IEcsRunSystem{
 		foreach (var i in f){
 			ref var c = ref f.Get1(i);
 			if (c.CurrCd > 0) return;
-			Object.Instantiate(c.Shot, c.User.position, Quaternion.identity);
+			Object.Instantiate(c.Shot, c.User.position, c.User.rotation);
 			c.CurrCd = c.Cd;
 		}
 	}

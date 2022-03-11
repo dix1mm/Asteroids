@@ -6,10 +6,10 @@ public class SceneLoader : MonoBehaviour{
 
 	public void LoadGame() => SceneManager.LoadScene("Game");
 
-	private void loadMenu(object o){
+	private void loadMenu(object arg){
 		SceneManager.LoadScene("Menu");
 		StartgameBtn.SetActive(true);
 	}
 
-	private void Start() => UnityEventGenerator.Subscribe(UEvent.GameEnded, loadMenu);
+	private void Start() => UnityEventGenerator.Subscribe(UEvent.GameOver, loadMenu);
 }
