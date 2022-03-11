@@ -6,20 +6,26 @@ public class SGun : IEcsRunSystem{
 	private EcsFilter<CGun> f = null;
 
 	public void Run(){
+		decreaseGunTimer();
 		foreach (var i in fShooting){
 			activateGuns();
-			return;
+			break;
+		}
+	}
+
+	private void decreaseGunTimer(){
+		foreach (var i in f){
+			ref var c = ref f.Get1(i);
+			c.CurrCd -= Time.deltaTime;
 		}
 	}
 
 	private void activateGuns(){
 		foreach (var i in f){
 			ref var c = ref f.Get1(i);
-			c.CurrCd -= Time.deltaTime;
-			if (c.CurrCd <= 0){
-				Object.Instantiate(c.Shot, c.User.position, Quaternion.identity);
-				c.CurrCd = c.Cd;
-			}
+			if (c.CurrCd > 0) return;
+			Object.Instantiate(c.Shot, c.User.position, Quaternion.identity);
+			c.CurrCd = c.Cd;
 		}
 	}
 }

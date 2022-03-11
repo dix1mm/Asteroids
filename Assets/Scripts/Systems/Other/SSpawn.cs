@@ -9,9 +9,11 @@ public class SSpawn : IEcsRunSystem{
 			ref var c = ref f.Get1(i);
 			c.CurrCd -= Time.deltaTime;
 			if (c.CurrCd <= 0){
-				Object.Instantiate(c.Unit, c.SpawnPlace.position, Quaternion.identity);
+				Object.Instantiate(c.Unit, c.SpawnPlace.position, Quaternion.Euler(0, 0, getRandomAngle()));
 				c.CurrCd = c.Cd;
 			}
 		}
 	}
+
+	private float getRandomAngle() => UnityEngine.Random.Range(0,360);
 }

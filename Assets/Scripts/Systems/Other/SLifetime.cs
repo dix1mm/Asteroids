@@ -6,10 +6,13 @@ public class SLifetime : IEcsRunSystem{
 
 	public void Run(){
 		foreach (var i in f){
+			ref var e = ref f.GetEntity(i);
 			ref var c = ref f.Get1(i);
 			c.Val -= Time.deltaTime;
-			if (c.Val <= 0)
+			if (c.Val <= 0){
 				Object.Destroy(c.Target);
+				e.Destroy();
+			}
 		}
 	}
 }

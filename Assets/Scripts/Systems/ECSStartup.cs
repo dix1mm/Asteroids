@@ -8,10 +8,22 @@ public class ECSStartup : MonoBehaviour{
 
 	private void systemsAdd(){
 		_systems
+			.Add(new SMoveForward())//передвижение вперед
+			.Add(new SMoveChase())//передвижение тарелки
+			.Add(new SMoveInput())//передвижение игрока (не уверен стоило ли их разбивать на несколько систем, с одной стороны кастомизация, с другой через чур много систем)
+			.Add(new SSlowdown())//замедление (активное и пассивное) игрока
+			.Add(new SAcceleration())//набор скорости для игрока
+			.Add(new SRotation())//повороты всех сущностей (пока только игрока)
+
 			.Add(new SGun())//выстрел из пушки
-			.Add(new SSpawn())//спавн астероидов и тарелок
+			.Add(new SLaser())//выстрел из лазера
+
 			.Add(new SColliders())//все столкновения
+			.Add(new SSpawn())//спавн астероидов и тарелок
+			.Add(new SPortal())//телепорт при входе за границу экрана
 			.Add(new SLifetime())//время жизни выстрелов
+			//ui
+			//поражение
 		;
 	}
 
